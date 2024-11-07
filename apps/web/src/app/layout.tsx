@@ -3,8 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'TurboRepo Template',
-  description: 'NextJs RC + Fastify',
+  title: 'Saveway',
+  description: 'Your new way of being financially responsible.',
 }
 
 export default function RootLayout({
