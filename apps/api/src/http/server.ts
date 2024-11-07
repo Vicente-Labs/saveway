@@ -2,7 +2,7 @@ import fastifyCors from '@fastify/cors'
 import fastifyJwt from '@fastify/jwt'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUI from '@fastify/swagger-ui'
-import { env } from '@saveway/env'
+import { env } from '@/env'
 import fastify from 'fastify'
 import {
   jsonSchemaTransform,
@@ -23,17 +23,17 @@ app.setErrorHandler(errorHandler)
 app.register(fastifySwagger, {
   openapi: {
     info: {
-      title: 'Template | API Specs',
-      description: 'API documentation for Template web project',
+      title: 'Saveway | API Specs',
+      description: 'API documentation for Saveway web project',
       version: '1.0.0',
     },
     components: {
       securitySchemes: {
-        // bearerAuth: {
-        //   type: 'http',
-        //   scheme: 'bearer',
-        //   bearerFormat: 'JWT',
-        // },
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
       },
     },
   },

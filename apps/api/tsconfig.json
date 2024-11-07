@@ -1,5 +1,5 @@
 {
-  "extends": "@saveway/tsconfig/node.json",
+  "extends": "../../config/typescript-config/node.json",
   "include": ["src/**/*", "types/*.d.ts"],
 
   "compilerOptions": {
