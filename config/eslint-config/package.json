@@ -1,5 +1,5 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@saveway/eslint-config",
   "version": "0.0.0",
   "private": true,
   "files": [
@@ -8,11 +8,11 @@
     "node.js"
   ],
   "devDependencies": {
-    "@repo/prettier": "workspace:*",
+    "@saveway/prettier": "workspace:*",
     "@rocketseat/eslint-config": "^2.2.2",
     "eslint-plugin-simple-import-sort": "^12.1.0"
   },
-  "prettier": "@repo/prettier",
+  "prettier": "@saveway/prettier",
   "eslintConfig": {
     "extends": ["./library.js"]
   }

@@ -32,7 +32,7 @@ importers:
       '@fastify/swagger-ui':
         specifier: ^4.0.1
         version: 4.1.0
-      '@repo/env':
+      '@saveway/env':
         specifier: workspace:*
         version: link:../../packages/env
       fastify:
@@ -48,13 +48,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@repo/eslint-config':
+      '@saveway/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint-config
-      '@repo/prettier':
+      '@saveway/prettier':
         specifier: workspace:*
         version: link:../../config/prettier
-      '@repo/tsconfig':
+      '@saveway/tsconfig':
         specifier: workspace:*
         version: link:../../config/typescript-config
       '@types/node':
@@ -94,13 +94,13 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.10)
     devDependencies:
-      '@repo/eslint-config':
+      '@saveway/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint-config
-      '@repo/prettier':
+      '@saveway/prettier':
         specifier: workspace:*
         version: link:../../config/prettier
-      '@repo/tsconfig':
+      '@saveway/tsconfig':
         specifier: workspace:*
         version: link:../../config/typescript-config
       '@types/node':
@@ -124,7 +124,7 @@ importers:
 
   config/eslint-config:
     devDependencies:
-      '@repo/prettier':
+      '@saveway/prettier':
         specifier: workspace:*
         version: link:../prettier
       '@rocketseat/eslint-config':
@@ -154,13 +154,13 @@ importers:
         specifier: ^3.22.5
         version: 3.23.8
     devDependencies:
-      '@repo/eslint-config':
+      '@saveway/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint-config
-      '@repo/prettier':
+      '@saveway/prettier':
         specifier: workspace:*
         version: link:../../config/prettier
-      '@repo/tsconfig':
+      '@saveway/tsconfig':
         specifier: workspace:*
         version: link:../../config/typescript-config
       '@types/node':

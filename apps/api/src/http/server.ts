@@ -2,7 +2,7 @@ import fastifyCors from '@fastify/cors'
 import fastifyJwt from '@fastify/jwt'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUI from '@fastify/swagger-ui'
-import { env } from '@repo/env'
+import { env } from '@saveway/env'
 import fastify from 'fastify'
 import {
   jsonSchemaTransform,

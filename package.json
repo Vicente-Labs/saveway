@@ -1,5 +1,5 @@
 {
-  "name": "turbo-template",
+  "name": "saveway",
   "private": true,
   "scripts": {
     "build": "turbo build",

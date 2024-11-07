@@ -19,9 +19,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/prettier": "workspace:*",
-    "@repo/tsconfig": "workspace:*",
+    "@saveway/eslint-config": "workspace:*",
+    "@saveway/prettier": "workspace:*",
+    "@saveway/tsconfig": "workspace:*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -29,10 +29,10 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  "prettier": "@repo/prettier",
+  "prettier": "@saveway/prettier",
   "eslintConfig": {
     "extends": [
-      "@repo/eslint-config/next"
+      "@saveway/eslint-config/next"
     ]
   }
 }
