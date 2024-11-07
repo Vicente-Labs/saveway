@@ -32,9 +32,6 @@ importers:
       '@fastify/swagger-ui':
         specifier: ^4.0.1
         version: 4.1.0
-      '@saveway/env':
-        specifier: workspace:*
-        version: link:../../packages/env
       fastify:
         specifier: ^4.28.1
         version: 4.28.1
@@ -124,12 +121,12 @@ importers:
 
   config/eslint-config:
     devDependencies:
-      '@saveway/prettier':
-        specifier: workspace:*
-        version: link:../prettier
       '@rocketseat/eslint-config':
         specifier: ^2.2.2
         version: 2.2.2(@types/eslint@9.6.0)(eslint@9.9.0(jiti@1.21.6))(typescript@5.4.5)
+      '@saveway/prettier':
+        specifier: workspace:*
+        version: link:../prettier
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.0
         version: 12.1.1(eslint@9.9.0(jiti@1.21.6))
@@ -144,28 +141,6 @@ importers:
         version: 0.5.14(prettier@3.3.3)
 
   config/typescript-config: {}
-
-  packages/env:
-    dependencies:
-      '@t3-oss/env-nextjs':
-        specifier: ^0.10.1
-        version: 0.10.1(typescript@5.4.5)(zod@3.23.8)
-      zod:
-        specifier: ^3.22.5
-        version: 3.23.8
-    devDependencies:
-      '@saveway/eslint-config':
-        specifier: workspace:*
-        version: link:../../config/eslint-config
-      '@saveway/prettier':
-        specifier: workspace:*
-        version: link:../../config/prettier
-      '@saveway/tsconfig':
-        specifier: workspace:*
-        version: link:../../config/typescript-config
-      '@types/node':
-        specifier: ^20.12.7
-        version: 20.15.0
 
 packages:
 
@@ -628,24 +603,6 @@ packages:
 
   '@swc/helpers@0.5.11':
     resolution: {integrity: sha512-YNlnKRWF2sVojTpIyzwou9XoTNbzbzONwRhOoniEioF1AtaitTvVZblaQRrAzChWQ1bLYyYSWzM18y4WwgzJ+A==}
-
-  '@t3-oss/env-core@0.10.1':
-    resolution: {integrity: sha512-GcKZiCfWks5CTxhezn9k5zWX3sMDIYf6Kaxy2Gx9YEQftFcz8hDRN56hcbylyAO3t4jQnQ5ifLawINsNgCDpOg==}
-    peerDependencies:
-      typescript: '>=5.0.0'
-      zod: ^3.0.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-
-  '@t3-oss/env-nextjs@0.10.1':
-    resolution: {integrity: sha512-iy2qqJLnFh1RjEWno2ZeyTu0ufomkXruUsOZludzDIroUabVvHsrSjtkHqwHp1/pgPUzN3yBRHMILW162X7x2Q==}
-    peerDependencies:
-      typescript: '>=5.0.0'
-      zod: ^3.0.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@types/eslint@9.6.0':
     resolution: {integrity: sha512-gi6WQJ7cHRgZxtkQEoyHMppPjq9Kxo5Tjn2prSKDSmZrCz8TZ3jSRCeTJm+WoM+oB0WG37bRqLzaaU3q7JypGg==}
@@ -2928,19 +2885,6 @@ snapshots:
   '@swc/helpers@0.5.11':
     dependencies:
       tslib: 2.6.3
-
-  '@t3-oss/env-core@0.10.1(typescript@5.4.5)(zod@3.23.8)':
-    dependencies:
-      zod: 3.23.8
-    optionalDependencies:
-      typescript: 5.4.5
-
-  '@t3-oss/env-nextjs@0.10.1(typescript@5.4.5)(zod@3.23.8)':
-    dependencies:
-      '@t3-oss/env-core': 0.10.1(typescript@5.4.5)(zod@3.23.8)
-      zod: 3.23.8
-    optionalDependencies:
-      typescript: 5.4.5
 
   '@types/eslint@9.6.0':
     dependencies:
