@@ -36,6 +36,20 @@
       "when": 1731082191810,
       "tag": "20241108160951_add-transactions",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1731084953339,
+      "tag": "20241108165553_add-title",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1731085248092,
+      "tag": "20241108170048_add-title-as-varchar",
+      "breakpoints": true
     }
   ]
 }
