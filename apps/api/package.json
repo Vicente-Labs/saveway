@@ -4,9 +4,9 @@
   "scripts": {
     "env:load": "dotenv -e ../../.env --",
     "dev": "pnpm env:load tsx watch src/http/server.ts",
-    "db:generate": "dotenv -e .env -- drizzle-kit generate --name",
-    "db:migrate": "dotenv -e .env -- drizzle-kit migrate",
-    "db:studio": "dotenv -e .env -- drizzle-kit studio"
+    "db:generate": "env:load drizzle-kit generate --name",
+    "db:migrate": "env:load drizzle-kit migrate",
+    "db:studio": "env:load drizzle-kit studio"
   },
   "dependencies": {
     "@fastify/cors": "^9.0.1",
