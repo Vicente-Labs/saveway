@@ -13,9 +13,9 @@ import {
 import { env } from '@/env'
 
 import { errorHandler } from './error-handler'
-import { generateGoogleAuthLink } from './routes/generate-google-auth-link'
-import { registerAccountWithGoogle } from './routes/register-account-with-google'
-import { registerAccountWithPassword } from './routes/register-account-with-password'
+import { generateGoogleAuthLink } from './routes/auth/generate-google-auth-link'
+import { registerAccountWithGoogle } from './routes/auth/register-account-with-google'
+import { registerAccountWithPassword } from './routes/auth/register-account-with-password'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
