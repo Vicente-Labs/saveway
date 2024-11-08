@@ -2,7 +2,6 @@ import fastifyCors from '@fastify/cors'
 import fastifyJwt from '@fastify/jwt'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUI from '@fastify/swagger-ui'
-import { env } from '@/env'
 import fastify from 'fastify'
 import {
   jsonSchemaTransform,
@@ -11,7 +10,10 @@ import {
   ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 
+import { env } from '@/env'
+
 import { errorHandler } from './error-handler'
+import { registerAccountWithPassword } from './routes/register-account-with-password'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -49,6 +51,8 @@ app.register(fastifyJwt, {
 })
 
 app.register(fastifyCors) // any front-end can access this API
+
+app.register(registerAccountWithPassword)
 
 app
   .listen({
