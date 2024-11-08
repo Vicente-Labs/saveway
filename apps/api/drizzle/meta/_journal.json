@@ -15,6 +15,13 @@
       "when": 1731076509389,
       "tag": "20241108143509_create-transactions-users-and-auth-link-tables",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1731077815519,
+      "tag": "20241108145655_update-user-fields",
+      "breakpoints": true
     }
   ]
 }
