@@ -13,6 +13,7 @@ import {
 import { env } from '@/env'
 
 import { errorHandler } from './error-handler'
+import { authenticateWithGoogle } from './routes/auth/authenticate-with-google'
 import { authenticateWithPassword } from './routes/auth/authenticate-with-password'
 import { generateGoogleAuthLink } from './routes/auth/generate-google-auth-link'
 import { registerAccountWithGoogle } from './routes/auth/register-account-with-google'
@@ -59,6 +60,7 @@ app.register(registerAccountWithPassword)
 app.register(registerAccountWithGoogle)
 app.register(generateGoogleAuthLink)
 app.register(authenticateWithPassword)
+app.register(authenticateWithGoogle)
 
 app
   .listen({
