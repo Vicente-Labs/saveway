@@ -1,12 +1,13 @@
 import { and, eq } from 'drizzle-orm'
 import type { FastifyInstance } from 'fastify'
+import type { ZodTypeProvider } from 'fastify-type-provider-zod'
 import { z } from 'zod'
 
 import { db } from '@/db'
 import { transactions } from '@/db/schemas'
 
 export async function getTransaction(app: FastifyInstance) {
-  app.get(
+  app.withTypeProvider<ZodTypeProvider>().get(
     '/transactions/:id',
     {
       schema: {

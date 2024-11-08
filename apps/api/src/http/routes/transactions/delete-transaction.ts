@@ -1,12 +1,13 @@
 import { and, eq } from 'drizzle-orm'
 import type { FastifyInstance } from 'fastify'
+import type { ZodTypeProvider } from 'fastify-type-provider-zod'
 import { z } from 'zod'
 
 import { db } from '@/db'
 import { transactions } from '@/db/schemas'
 
 export async function deleteTransaction(app: FastifyInstance) {
-  app.delete(
+  app.withTypeProvider<ZodTypeProvider>().delete(
     '/transactions/:id',
     {
       schema: {

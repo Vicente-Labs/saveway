@@ -18,6 +18,7 @@ import { authenticateWithPassword } from './routes/auth/authenticate-with-passwo
 import { generateGoogleAuthLink } from './routes/auth/generate-google-auth-link'
 import { registerAccountWithGoogle } from './routes/auth/register-account-with-google'
 import { registerAccountWithPassword } from './routes/auth/register-account-with-password'
+import { registerCard } from './routes/cards/register-card'
 import { createTransaction } from './routes/transactions/create-transaction'
 import { deleteTransaction } from './routes/transactions/delete-transaction'
 import { fetchTransactions } from './routes/transactions/fetch-transactions'
@@ -72,6 +73,8 @@ app.register(fetchTransactions)
 app.register(getTransaction)
 app.register(updateTransaction)
 app.register(deleteTransaction)
+
+app.register(registerCard)
 
 app
   .listen({

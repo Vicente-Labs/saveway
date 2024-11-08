@@ -50,6 +50,13 @@
       "when": 1731085248092,
       "tag": "20241108170048_add-title-as-varchar",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1731087340540,
+      "tag": "20241108173540_add-cards",
+      "breakpoints": true
     }
   ]
 }
