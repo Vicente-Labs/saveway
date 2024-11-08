@@ -7,6 +7,7 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-explicit-any': 'error',
   },
   settings: {
     react: {
