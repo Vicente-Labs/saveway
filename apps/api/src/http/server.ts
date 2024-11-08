@@ -19,6 +19,7 @@ import { generateGoogleAuthLink } from './routes/auth/generate-google-auth-link'
 import { registerAccountWithGoogle } from './routes/auth/register-account-with-google'
 import { registerAccountWithPassword } from './routes/auth/register-account-with-password'
 import { createTransaction } from './routes/transactions/create-transaction'
+import { fetchTransactions } from './routes/transactions/fetch-transactions'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -64,6 +65,7 @@ app.register(authenticateWithPassword)
 app.register(authenticateWithGoogle)
 
 app.register(createTransaction)
+app.register(fetchTransactions)
 
 app
   .listen({
