@@ -2,7 +2,7 @@ import { createId } from '@paralleldrive/cuid2'
 import { relations } from 'drizzle-orm'
 import { pgEnum, pgTable, text, timestamp } from 'drizzle-orm/pg-core'
 
-import { transactions } from './transaction'
+import { transactions } from './transactions'
 
 export const providerEnum = pgEnum('provider', ['GOOGLE'])
 

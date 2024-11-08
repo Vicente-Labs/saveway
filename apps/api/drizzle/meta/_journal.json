@@ -29,6 +29,13 @@
       "when": 1731081284718,
       "tag": "20241108155444_add-provider-to-users",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1731082191810,
+      "tag": "20241108160951_add-transactions",
+      "breakpoints": true
     }
   ]
 }
