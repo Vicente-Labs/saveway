@@ -1,4 +1,4 @@
-import { eq } from 'drizzle-orm'
+import { desc, eq } from 'drizzle-orm'
 import type { FastifyInstance } from 'fastify'
 import type { ZodTypeProvider } from 'fastify-type-provider-zod'
 
@@ -15,7 +15,7 @@ export async function fetchTransactions(app: FastifyInstance) {
         .select()
         .from(transactions)
         .where(eq(transactions.userId, userId))
-        .orderBy(transactions.occurredAt)
+        .orderBy((fields) => desc(fields.occurredAt))
         .limit(20)
 
       return res.status(200).send({ transactions: fetchedTransactions })

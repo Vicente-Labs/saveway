@@ -57,6 +57,13 @@
       "when": 1731087340540,
       "tag": "20241108173540_add-cards",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1731088659226,
+      "tag": "20241108175739_add-card-usage",
+      "breakpoints": true
     }
   ]
 }
