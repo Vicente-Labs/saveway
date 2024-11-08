@@ -13,6 +13,7 @@ import {
 import { env } from '@/env'
 
 import { errorHandler } from './error-handler'
+import { registerAccountWithGoogle } from './routes/register-account-with-google'
 import { registerAccountWithPassword } from './routes/register-account-with-password'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -53,6 +54,7 @@ app.register(fastifyJwt, {
 app.register(fastifyCors) // any front-end can access this API
 
 app.register(registerAccountWithPassword)
+app.register(registerAccountWithGoogle)
 
 app
   .listen({
