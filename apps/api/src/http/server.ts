@@ -20,6 +20,7 @@ import { registerAccountWithGoogle } from './routes/auth/register-account-with-g
 import { registerAccountWithPassword } from './routes/auth/register-account-with-password'
 import { createTransaction } from './routes/transactions/create-transaction'
 import { fetchTransactions } from './routes/transactions/fetch-transactions'
+import { getTransaction } from './routes/transactions/get-transaction'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -66,6 +67,7 @@ app.register(authenticateWithGoogle)
 
 app.register(createTransaction)
 app.register(fetchTransactions)
+app.register(getTransaction)
 
 app
   .listen({
