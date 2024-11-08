@@ -5,6 +5,7 @@ import { DollarSign, LineChart, Shield, Wallet } from 'lucide-react'
 import Image from 'next/image'
 
 import { Header } from '@/components/header'
+import { AnimatedBadge } from '@/components/ui/animated-badge'
 import { Button } from '@/components/ui/button'
 import OrbitingCircles from '@/components/ui/orbiting-circles'
 
@@ -20,13 +21,15 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center gap-4 px-[4rem] pb-[15.625rem] pt-[10rem]"
+        className="flex flex-col items-center gap-4 px-[4rem] pb-[15.625rem] pt-[5rem]"
       >
+        <AnimatedBadge>✨ Introducing saveway.io ✨</AnimatedBadge>
+
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-center text-4xl font-bold"
+          className="mt-2 text-center text-4xl font-bold"
         >
           Saveway where financial freedom
           <br />
@@ -57,8 +60,25 @@ export default function Home() {
           <Button variant="outline">Learn more</Button>
           <Button className="font-bold">Start your financial journey </Button>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="mt-12 w-full max-w-5xl overflow-hidden rounded-xl border border-white/10"
+        >
+          <Image
+            src="/dashboard-preview.png"
+            alt="Saveway Preview"
+            width={1200}
+            height={675}
+            className="w-full"
+            priority
+          />
+        </motion.div>
       </motion.div>
-      <motion.div className="flex flex-col items-center gap-4 px-16 pb-[15.625rem] pt-[10rem]">
+
+      <motion.div className="flex flex-col items-center gap-4 px-16 pb-10">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -136,21 +156,21 @@ export default function Home() {
                 {/* Inner Circles */}
                 <OrbitingCircles
                   className="size-[30px] border-none bg-transparent"
-                  duration={20}
-                  delay={20}
+                  duration={40}
+                  delay={40}
                   radius={70}
                 >
                   <Image
                     src="/etherum.png"
                     className="grayscale dark:invert"
                     alt="Ethereum"
-                    width={100}
-                    height={100}
+                    width={40}
+                    height={40}
                   />
                 </OrbitingCircles>
                 <OrbitingCircles
                   className="size-[30px] border-none bg-transparent"
-                  duration={20}
+                  duration={40}
                   delay={10}
                   radius={40}
                 >
@@ -158,8 +178,8 @@ export default function Home() {
                     src="/bitcoin.png"
                     className="grayscale"
                     alt="Bitcoin"
-                    width={100}
-                    height={100}
+                    width={40}
+                    height={40}
                   />
                 </OrbitingCircles>
 
@@ -167,30 +187,30 @@ export default function Home() {
                 <OrbitingCircles
                   className="size-[50px] border-none bg-transparent"
                   radius={120}
-                  duration={20}
+                  duration={40}
                   reverse
                 >
                   <Image
                     src="/xrp.png"
                     className="grayscale dark:invert"
                     alt="XRP"
-                    width={100}
-                    height={100}
+                    width={40}
+                    height={40}
                   />
                 </OrbitingCircles>
                 <OrbitingCircles
                   className="size-[50px] border-none"
                   radius={100}
-                  duration={20}
-                  delay={20}
+                  duration={40}
+                  delay={40}
                   reverse
                 >
                   <Image
                     src="/tether.png"
                     className="grayscale"
                     alt="Tether"
-                    width={100}
-                    height={100}
+                    width={40}
+                    height={40}
                   />
                 </OrbitingCircles>
               </div>
