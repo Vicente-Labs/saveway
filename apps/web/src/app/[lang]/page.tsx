@@ -62,24 +62,24 @@ export default function Home() {
           <Button className="font-bold">Start your financial journey </Button>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="mt-12 w-full max-w-5xl overflow-hidden rounded-xl border border-white/10"
+          className="mt-12 w-full max-w-5xl overflow-hidden rounded-xl border border-white/10 blur-lg"
         >
           <Image
             src="/dashboard-preview.png"
-            alt="Saveway Preview"
+            alt="--- Preview"
             width={1200}
             height={675}
             className="w-full"
             priority
           />
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
-      <motion.div className="flex flex-col items-center gap-4 px-16 pb-10">
+      <motion.div className="flex flex-col items-center gap-4 px-16 pb-20 pt-40">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
