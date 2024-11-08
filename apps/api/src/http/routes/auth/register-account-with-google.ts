@@ -34,7 +34,7 @@ export async function registerAccountWithGoogle(app: FastifyInstance) {
         const [existingUser] = await db
           .select()
           .from(users)
-          .where(eq(users.email, userInfo.data.email))
+          .where(eq(users.email, userInfo.data.email.toLowerCase()))
           .limit(1)
 
         if (existingUser) {
@@ -55,7 +55,7 @@ export async function registerAccountWithGoogle(app: FastifyInstance) {
         const [newUser] = await db
           .insert(users)
           .values({
-            email: userInfo.data.email,
+            email: userInfo.data.email.toLowerCase(),
             name: userInfo.data.name,
             provider: 'GOOGLE',
             providerId: userInfo.data.id,

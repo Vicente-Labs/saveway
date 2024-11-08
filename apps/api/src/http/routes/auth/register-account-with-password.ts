@@ -27,7 +27,7 @@ export async function registerAccountWithPassword(app: FastifyInstance) {
       const { email, name, phone, password } = req.body
 
       const userWithSameEmail = await db.query.users.findFirst({
-        where: eq(users.email, email),
+        where: eq(users.email, email.toLowerCase()),
       })
 
       if (userWithSameEmail) {
@@ -47,7 +47,7 @@ export async function registerAccountWithPassword(app: FastifyInstance) {
       const [user] = await db
         .insert(users)
         .values({
-          email,
+          email: email.toLowerCase(),
           name,
           passwordHash,
           phone,
