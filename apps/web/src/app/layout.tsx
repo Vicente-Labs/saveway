@@ -2,6 +2,7 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 
+import { Pattern } from '@/components/pattern'
 import type { Language } from '@/types/languages'
 
 export const metadata: Metadata = {
@@ -22,7 +23,10 @@ export default async function RootLayout({
         <meta name="theme-color" content="#09090b" />
       </head>
 
-      <body>{children}</body>
+      <body>
+        <Pattern variant="checkered" />
+        {children}
+      </body>
     </html>
   )
 }
