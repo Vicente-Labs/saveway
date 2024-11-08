@@ -13,6 +13,7 @@ import {
 import { env } from '@/env'
 
 import { errorHandler } from './error-handler'
+import { generateGoogleAuthLink } from './routes/generate-google-auth-link'
 import { registerAccountWithGoogle } from './routes/register-account-with-google'
 import { registerAccountWithPassword } from './routes/register-account-with-password'
 
@@ -55,6 +56,7 @@ app.register(fastifyCors) // any front-end can access this API
 
 app.register(registerAccountWithPassword)
 app.register(registerAccountWithGoogle)
+app.register(generateGoogleAuthLink)
 
 app
   .listen({
