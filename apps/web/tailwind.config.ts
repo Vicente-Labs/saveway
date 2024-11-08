@@ -126,6 +126,14 @@ const config: Config = {
             backgroundPosition: '-200% 0',
           },
         },
+        'infinite-slider': {
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - var(--gap)))',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -136,6 +144,7 @@ const config: Config = {
         'shiny-text': 'shiny-text 8s infinite',
         'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
         shine: 'shine 2s linear infinite',
+        'infinite-slider': 'infinite-slider 20s linear infinite',
       },
     },
   },

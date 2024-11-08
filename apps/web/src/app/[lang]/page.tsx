@@ -5,6 +5,7 @@ import { DollarSign, LineChart, Shield, Wallet } from 'lucide-react'
 import Image from 'next/image'
 
 import { Header } from '@/components/header'
+import { InfiniteSlider } from '@/components/infinite-slider'
 import { AnimatedBadge } from '@/components/ui/animated-badge'
 import { Button } from '@/components/ui/button'
 import OrbitingCircles from '@/components/ui/orbiting-circles'
@@ -119,7 +120,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="group relative col-span-2 cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
+            className="group relative col-span-2 cursor-default overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4">
@@ -132,6 +133,38 @@ export default function Home() {
                 Connect your bank accounts securely for transparent transaction
                 monitoring and comprehensive financial analysis
               </p>
+
+              <InfiniteSlider>
+                <img
+                  src="/banks/itau.png"
+                  className="aspect-square h-12 w-12 rounded-[4px] grayscale"
+                  alt="Itaú bank logo"
+                />
+
+                <img
+                  src="/banks/bradesco.png"
+                  className="aspect-square h-12 w-12 rounded-[4px] grayscale"
+                  alt="Bradesco bank logo"
+                />
+
+                <img
+                  src="/banks/santander.png"
+                  className="aspect-square h-12 w-12 rounded-[4px] grayscale"
+                  alt="Santander bank logo"
+                />
+
+                <img
+                  src="/banks/hsbc.png"
+                  className="aspect-square h-12 w-12 rounded-[4px] grayscale"
+                  alt="HSBC bank logo"
+                />
+
+                <img
+                  src="/banks/barclays.png"
+                  className="aspect-square h-12 w-12 rounded-[4px] grayscale"
+                  alt="Barclays bank logo"
+                />
+              </InfiniteSlider>
             </div>
           </motion.div>
 
@@ -139,7 +172,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="group relative row-span-2 cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
+            className="group relative row-span-2 cursor-default overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4">
@@ -221,7 +254,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="group relative cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
+            className="group relative cursor-default overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4">
@@ -241,7 +274,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="group relative cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
+            className="group relative cursor-default overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-4">
