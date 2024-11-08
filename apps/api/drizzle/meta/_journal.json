@@ -8,6 +8,13 @@
       "when": 1731074882804,
       "tag": "20241108140802_create-base-users-table",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1731076509389,
+      "tag": "20241108143509_create-transactions-users-and-auth-link-tables",
+      "breakpoints": true
     }
   ]
 }
