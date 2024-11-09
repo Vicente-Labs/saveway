@@ -123,6 +123,7 @@ export default function Home() {
             className="group relative col-span-2 cursor-default overflow-hidden rounded-xl border border-white/10 bg-neutral-950 p-6 transition-colors hover:border-white/20"
           >
             <div className="flex flex-col gap-4">
+              <AnimatedBadge>Coming soon</AnimatedBadge>
               <div className="flex items-center gap-4">
                 <div className="rounded-lg bg-lime-400/10 p-3">
                   <DollarSign className="h-6 w-6 text-lime-400" />
@@ -133,7 +134,6 @@ export default function Home() {
                 Connect your bank accounts securely for transparent transaction
                 monitoring and comprehensive financial analysis
               </p>
-
               <InfiniteSlider>
                 <img
                   src="/banks/itau.png"
