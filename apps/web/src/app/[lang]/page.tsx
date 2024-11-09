@@ -1,7 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { DollarSign, LineChart, Shield, Wallet } from 'lucide-react'
+import {
+  ChevronDown,
+  DollarSign,
+  LineChart,
+  Shield,
+  Wallet,
+} from 'lucide-react'
 import Image from 'next/image'
 
 import { Header } from '@/components/header'
@@ -56,10 +62,42 @@ export default function Home() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="flex gap-4"
+          className="flex flex-col items-center gap-4"
         >
-          <Button variant="outline">Learn more</Button>
-          <Button className="font-bold">Start your financial journey </Button>
+          <div className="flex gap-4">
+            <Button variant="outline">Learn more</Button>
+            <Button className="font-bold">Start your financial journey </Button>
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            transition={{ delay: 1, duration: 0.6 }}
+            className="mt-8 flex flex-col items-center gap-2"
+          >
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: window.innerHeight * 1.2,
+                  behavior: 'smooth',
+                })
+              }}
+            >
+              <ChevronDown className="h-6 w-6 animate-bounce" />
+            </button>
+
+            <button
+              onClick={() => {
+                window.scrollTo({
+                  top: window.innerHeight * 1.2,
+                  behavior: 'smooth',
+                })
+              }}
+            >
+              <span className="text-sm text-muted-foreground">
+                Scroll to explore more
+              </span>
+            </button>
+          </motion.div>
         </motion.div>
 
         {/* <motion.div
@@ -79,7 +117,10 @@ export default function Home() {
         </motion.div> */}
       </motion.div>
 
-      <motion.div className="flex flex-col items-center gap-4 px-16 pb-20 pt-40">
+      <motion.div
+        layoutId="section-2"
+        className="flex flex-col items-center gap-4 px-16 pb-20 pt-40"
+      >
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -2,16 +2,18 @@
 'use client'
 
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
-import { ul } from 'framer-motion/client'
 import { DollarSign } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
+
+import { useLanguage } from '@/app/context/language'
 
 import { Button } from './ui/button'
 
 export function Header() {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
+
+  const { language: lang } = useLanguage()
 
   const background = useMotionTemplate`radial-gradient(200px circle at ${mouseX}px ${mouseY}px, rgba(38, 38, 38, 0.4), transparent 80%)`
 
@@ -59,7 +61,9 @@ export function Header() {
                 Pricing
               </li>
             </ul>
-            <Button className="font-bold">Login</Button>
+            <Button className="font-bold" asChild>
+              <Link href={`/${lang}/login`}>Login</Link>
+            </Button>
           </div>
         </motion.div>
       </motion.div>
